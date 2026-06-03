@@ -137,6 +137,7 @@
       try {
         await fetch(GAS_URL, {
           method: 'POST',
+          mode: 'no-cors',  // ← この行を追加
           body: JSON.stringify({
             source: 'liff', userId, category: selectedCategory, amount, memo, date
           })
